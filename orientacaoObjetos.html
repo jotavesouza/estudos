@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientação a Objetos em Java</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Orientação a Objetos em Java</h1>
+        </header>
+
+        <div class="subsection">
+            <h3>Comparator X Comparable</h3>
+
+            <section>
+                <h4>Comparable</h4>
+                <p>A lógica é definida dentro da própria classe.</p>
+                <pre>
+Class Pessoa implements Comparable<Pessoa> {
+    // atributos
+    //getter e setter
+
+    @Override
+    public int compareTo(Pessoa p) {
+        return Integer.compare(this.idade, p.idade);
+    }
+}
+                </pre>
+            </section>
+
+            <section>
+                <h4>Comparator</h4>
+                <p>A lógica é definida fora da classe. Permite mais de um critério de ordenação ou quando não pode modificar a classe original.</p>
+                <pre>
+Class Pessoa {
+    // atributos
+    // getter e setter
+}
+
+Class CompararPorIdade implements Comparator<Pessoa> {
+    @Override
+    public int compare(Pessoa p1, Pessoa p2) {
+        return Integer.compare(p1.getIdade(), p2.getIdade());
+    }
+}
+                </pre>
+            </section>
+        </div>
+
+        <footer>
+            <p>Feito por João Vítor Souza</p>
+        </footer>
+    </div>
+</body>
+</html>
