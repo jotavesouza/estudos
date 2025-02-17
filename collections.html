@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections em Java</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Collections em Java</h1>
+        </header>
+
+        <div class="subsection">
+            <h3>Collections</h3>
+            
+            <section>
+                <h4>List</h4>
+                <ul>
+                    <li><strong>Características:</strong>
+                        <ul>
+                            <li>Ordem definida</li>
+                            <li>Permite duplicados</li>
+                            <li>Acesso por índice</li>
+                        </ul>
+                    </li>
+                    <li><strong>Principais métodos:</strong>
+                        <ul>
+                            <li>add(E e)</li>
+                            <li>get(int i)</li>
+                            <li>remove(int i)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Tipos:</strong>
+                        <ul>
+                            <li>ArrayList</li>
+                            <li>LinkedList</li>
+                            <li>Vector</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre>
+List<T> lista = new ArrayList&lt;&gt;();
+                </pre>
+            </section>
+
+            <section>
+                <h4>Set</h4>
+                <ul>
+                    <li><strong>Características:</strong>
+                        <ul>
+                            <li>Não tem ordem garantida</li>
+                            <li>Não permite duplicados</li>
+                            <li>Não garante acesso por índice</li>
+                        </ul>
+                    </li>
+                    <li><strong>Principais métodos:</strong>
+                        <ul>
+                            <li>add(E e) - Retorna ‘false’ se já existir</li>
+                            <li>remove(Object o)</li>
+                            <li>contains(Object o)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Tipos:</strong>
+                        <ul>
+                            <li>HashSet</li>
+                            <li>LinkedHashSet</li>
+                            <li>TreeSet</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre>
+Set<T> conjunto = new HashSet&lt;&gt;();
+                </pre>
+            </section>
+
+            <section>
+                <h4>Map</h4>
+                <ul>
+                    <li><strong>Características:</strong>
+                        <ul>
+                            <li>Pares de chave e valor</li>
+                            <li>Chaves únicas</li>
+                            <li>Acesso eficiente</li>
+                        </ul>
+                    </li>
+                    <li><strong>Principais métodos:</strong>
+                        <ul>
+                            <li>put(K key, V value)</li>
+                            <li>get(Object key)</li>
+                            <li>containsKey(Object key)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Tipos:</strong>
+                        <ul>
+                            <li>HashMap</li>
+                            <li>LinkedHashMap</li>
+                            <li>TreeMap</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre>
+Map<T,T> mapa = new HashMap&lt;&gt;();
+                </pre>
+            </section>
+        </div>
+
+        <footer>
+            <p>Feito por João Vítor Souza</p>
+        </footer>
+    </div>
+</body>
+</html>
