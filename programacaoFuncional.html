@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Funcional em Java</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Programação Funcional em Java</h1>
+        </header>
+
+        <div class="subsection">
+            <h3>Programação Funcional</h3>
+
+            <section>
+                <h4>Stream</h4>
+                <p><strong>Lambda:</strong> (argumento) → (corpo)</p>
+                <p><strong>Method reference:</strong> Classe::método</p>
+            </section>
+
+            <section>
+                <h4>Exemplo de Ordenação</h4>
+
+                <p><strong>Com Lambda:</strong></p>
+                <pre>
+pessoaPorAltura
+    .sort((p1, p2) -> Double.compare(p1.getAltura(), p2.getAltura()));
+                </pre>
+
+                <p><strong>Com Method Reference:</strong></p>
+                <pre>
+pessoaPorAltura.sort(
+    Comparator.comparingDouble(Pessoa::getAltura));
+                </pre>
+            </section>
+
+            <section>
+                <h4>Funcional Interface</h4>
+                <p>Interface com um Single Abstract Method (SAM). Usada com Lambda e Method References.</p>
+                <p>@FunctionalInterface - Garante que há um único método abstrato.</p>
+                <pre>
+@FunctionalInterface
+public interface Operacao {
+    int calcular(int a, int b);
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Operacao soma = (a, b) -> a + b;
+        int resultado = soma.calcular(3, 5);
+    }
+}
+                </pre>
+            </section>
+
+            <section>
+                <h4>Exemplos de Interfaces Funcionais</h4>
+                <ul>
+                    <li><strong>Consumer&lt;T&gt;:</strong> Aceita um valor do tipo T e não retorna nada.</li>
+                    <li><strong>Supplier&lt;T&gt;:</strong> Não aceita valores, retorna um valor do tipo T.</li>
+                    <li><strong>Function&lt;T, R&gt;:</strong> Recebe um valor do tipo T e retorna um valor do tipo R.</li>
+                    <li><strong>Predicate&lt;T&gt;:</strong> Recebe um valor do tipo T e retorna um booleano.</li>
+                    <li><strong>BinaryOperator&lt;T&gt;:</strong> Recebe dois valores do tipo T e retorna um valor do mesmo tipo.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>Exemplo de Uso do Consumer:</h4>
+                <pre>
+List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
+numeros.forEach(n -> {
+    if (n % 2 == 0) {
+        System.out.println(n);
+    }
+});
+                </pre>
+            </section>
+
+            <section>
+                <h4>Exemplo de Uso do Supplier:</h4>
+                <pre>
+List<String> listaSaudacoes = Stream.generate(() -> "Olá, seja bem-vindo(a)!");
+listaSaudacoes.forEach(System.out::println);
+                </pre>
+            </section>
+        </div>
+
+        <footer>
+            <p>Feito por João Vítor Souza</p>
+        </footer>
+    </div>
+</body>
+</html>
