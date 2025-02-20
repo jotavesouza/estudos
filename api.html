@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API - Resumo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>API</h1>
+        </header>
+
+        <section>
+            <h2>Application Programming Interface</h2>
+            <p>Conjunto de regras e definições que permite que diferentes softwares se comuniquem entre si.</p>
+
+            <h3>Tipos de API</h3>
+            <ul>
+                <li><strong>RESTful</strong>
+                    <ul>
+                        <li>Estilo de arquitetura para sistemas distribuídos, que utiliza os verbos HTTP para comunicação entre Client e Server.</li>
+                        <li><strong>GET</strong> - Recuperar dados. O servidor envia somente a informação solicitada.</li>
+                        <li><strong>POST</strong> - Criar novos recursos.</li>
+                        <li><strong>PUT / PATCH</strong>
+                            <ul>
+                                <li>PUT → Atualização completa</li>
+                                <li>PATCH → Atualização parcial</li>
+                            </ul>
+                        </li>
+                        <li><strong>DELETE</strong> - Remoção de dados do Servidor</li>
+                    </ul>
+                </li>
+                <li><strong>SOAP</strong>
+                    <ul>
+                        <li>Independente de linguagem e plataforma de transporte</li>
+                        <li>Utiliza XML - Mais estruturado e verboso em comparação com o JSON</li>
+                        <li>Requisitos mais rigorosos - Exige um cabeçalho para definir aspectos como autenticação e segurança</li>
+                    </ul>
+                </li>
+                <li><strong>GraphQL</strong>
+                    <ul>
+                        <li>Consulta personalizada - Ao contrário do REST, o cliente pode especificar exatamente quais dados ele deseja, reduzindo o tráfego de dados</li>
+                        <li>Eficiente na redução de solicitações e no tamanho dos dados transferidos</li>
+                        <li>Flexível e fortemente tipada, facilitando a evolução das APIs</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
