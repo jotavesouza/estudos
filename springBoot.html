@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Boot - Resumo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Spring Boot</h1>
+        </header>
+
+        <section>
+            <h2>Spring Framework</h2>
+            <p>Injeção de dependência</p>
+            <ul>
+                <li>Padrão de design usado para diminuir o acoplamento entre componentes</li>
+                <li>O Spring gerencia a criação e o ciclo de vida de objetos (beans) e injeta as dependências em tempo de execução</li>
+            </ul>
+
+            <h3>Spring Boot</h3>
+            <ul>
+                <li>Simplifica a configuração e o gerenciamento de dependências</li>
+                <li>Faz a configuração automática de muitos componentes, acelerando o desenvolvimento</li>
+            </ul>
+
+            <h4>Injeção de Dependência</h4>
+            <ul>
+                <li><strong>Bean</strong>
+                    <ul>
+                        <li>O Spring cria e gerencia instâncias desses objetos e os injeta nas classes que precisam de sua funcionalidade</li>
+                        <li><strong>Tipos:</strong> @Component, @Service, @Controller, @Repository</li>
+                    </ul>
+                </li>
+                <li><strong>Autowired</strong>
+                    <ul>
+                        <li>Usada para injeção automática de dependências</li>
+                        <li>O Spring fornece automaticamente a dependência necessária (um bean) na classe que utiliza a anotação</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Propriedades de Configuração</h4>
+            <ul>
+                <li><strong>@Value</strong> - Permite injetar valores em campos de uma classe diretamente a partir de propriedades</li>
+                <li><strong>@ConfigurationProperties</strong> - Mapear propriedades de configuração para um bean de configuração</li>
+            </ul>
+
+            <h4>JPA - Java Persistence API</h4>
+            <ul>
+                <li><strong>ORM</strong> - Mapeamento de objetos Java para tabelas de um banco de dados relacional</li>
+                <li>CrudRepository, JPARepository, PagingAndSortingRepository</li>
+                <li>Anotações: @Query, @Param</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
